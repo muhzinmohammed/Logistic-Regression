@@ -9,9 +9,6 @@ bc = datasets.load_breast_cancer()
 X,Y = bc.data,bc.target
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2,random_state=3)
 
-# fig = plt.figure(figsize=(8,6))
-# plt.scatter(X[:,0],Y,color = "r",marker= "o", s=20)
-# plt.show()
 classifier = LogisticRegression()
 classifier.fit(X_train,Y_train)
 pred = classifier.predict(X_test)
